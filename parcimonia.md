@@ -86,14 +86,45 @@ Infelizmente, o _TNT_ não aceita o formato _fasta__ como _input_. Desta forma, 
 >; ‘<- Note the semicolon (and the way you add comments)!’
 >
 
-O _script_
+O _script_ 'fasta2hennig86.py' faz esta conversão automaticamente. Para executar este _script_ na matriz. Digite o comando abaixo: 
 
 
+```
+python3 fasta2hennig86.py helobdella_GenEvol_dataset_aligned.fasta
+```
+
+O arquivo matrix.tnt deverá ser criado, caso o _script_ tenha corrido perfeitamente.
+
+## Reconstrução filogenética por parsimônia usando o _TNT_
+
+Agora que nós já temos o a matriz, nós utilizaremos o _TNT_ para realizar busca heurística da árvore mais parsimoniosa.
+
+**1º passo:**
+Mude o seu diretório de trabalho para a pasta contendo o aquivo executável do _TNT_ (TNT-bin). E execute o arquivo _TNT_: 
+
+```
+cd TNT-bin
+./TNT
+```
+
+Caso seja a primeira vez que você executou o _TNT_, você precisará aceitar os termos de uso. Siga as instruções do programa.
+
+Após executar o _TNT_, você deverá observar a seguinte tela:
+
+![image](https://github.com/user-attachments/assets/e2ea46cd-a1e8-466d-a428-7e9da6af3d18)
+
+Observe que o prompt do terminal foi substituido pelo prompt do _TNT_, indicado pela seta.
+
+Apesar do _TNT_ ser bastante eficiente na busca heirística, ele apresenta diversos problemas. O primeiro deles é a falta de um manual oficial. Desta forma, nós precisamos utilizar fontes diversas quando precisamos resolver problemas, ou procurar por comandos do programa. A tabela abaixo fornece uma lista dos comando do TNT, mas para saber o que eles fazem, você precisará utilizar o comando 'help'.
+
+![image](https://github.com/user-attachments/assets/7ea14c6b-61d5-4b73-8d4d-4646d6fde6a4)
+
+Para exibir instruções para um comando, tente ```help <nomedocomando>```. Tente:
 
 
-
-
-
+```
+help procedure
+```
 
 
 
