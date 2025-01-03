@@ -13,5 +13,9 @@ A figura abaixo representa o número de árvores possíveis para um dataset *n* 
 ![image](https://github.com/user-attachments/assets/10fc6507-9bd6-4e1d-ae06-5011a81b816d)
 
 
+Existem vários softwares para reconstrução filogenética utilizando o critério de parcimônia. O TNT (_Tree Analysis using New Technology_) é um software bastante robusto para este tipo de análise, pois implementa algorítmos poderos de busca heurística. Durante este tutorial, nós utilizaremos o TNT para a reconstrução filogenética do dataset de _Helobdella_.
+
+
+
 > [!NOTE]
 > Useful information that users should know, even when skimming content.
