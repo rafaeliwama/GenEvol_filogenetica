@@ -115,6 +115,8 @@ Após executar o _TNT_, você deverá observar a seguinte tela:
 
 Observe que o prompt do terminal foi substituido pelo prompt do _TNT_, indicado pela seta.
 
+
+**2º passo:**
 Apesar do _TNT_ ser bastante eficiente na busca heirística, ele apresenta diversos problemas. O primeiro deles é a falta de um manual oficial. Desta forma, nós precisamos utilizar fontes diversas quando precisamos resolver problemas, ou procurar por comandos do programa. A tabela abaixo fornece uma lista dos comando do TNT, mas para saber o que eles fazem, você precisará utilizar o comando 'help'.
 
 ![image](https://github.com/user-attachments/assets/7ea14c6b-61d5-4b73-8d4d-4646d6fde6a4)
@@ -123,9 +125,53 @@ Para exibir instruções para um comando, tente ```help <nomedocomando>```. Tent
 
 
 ```
-help procedure
+help mxram
 ```
 
+Antes de começar a análise, nós precisamos alocar memória RAM do computador utilizado para esta análise. Este procedimento é feito com o comando 'mxram'. Aloque 5 gb de memória RAM com o comando:
+
+```
+mxram 5000;
+```
+
+O comando 'nstates' especifica qual será o tipo de matriz utilizada na análise. No nosso caso, nós utilzaremos sequências de DNA, portanto teremos que especificar para o TNT utilizando seguinte linha de comando:
+
+
+```
+nstates DNA;
+```
+
+Agora, indique a matriz que será utilizada para a análise:
+
+```
+procedure matrix.tnt;
+```
+
+Perceba que o TNT indica as dimensões e quantos estados de caracteres estão presentes na análise.
+
+**3º passo: configurando os parâmetros de busca**
+
+Antes de começar a busca heurística, nós precisamos especificar alguns parâmetros. São eles:
+
+```
+rseed *;
+taxname =;
+hold 100000;
+tsave helobdella.mpts.tnttre;
+xmult: replic 1000 ratchet 5 nodrift fuse 5 hits 10;
+```
+
+Onde: 
+
+```rseed *;``` - Seleciona uma árvore aleatória para começar a busca
+
+```taxname =;``` - Extrai o nome dos terminais da própria matriz
+
+```hold 100000;``` - Armazena 100000 árvores na memória
+
+```tsave helobdella.mpts.tnttre;``` - Salva a árvore no arquivo especificado
+
+```xmult: replic 1000 ratchet 5 nodrift fuse 5 hits 10;``` - Especifica os algorítmos utilizados na busca heurística. Serão: 1000 répicas, 5 rodadas de ratched, não será aplicado drift, 5 rodadas de fuse e a busca terminará quando a árvore atingir 10 hits.
 
 
 
