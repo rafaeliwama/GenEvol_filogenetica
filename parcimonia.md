@@ -53,3 +53,49 @@ Em alguns segundos, você poderá observar os resultados. Perceba que foram adic
 
 > [!NOTE]
 > Não é possível através de um alinhamento como este diferenciar a falta de informação sobre um sítio de um indel. Por este motivo, nas análises filogenéticas é comum considerar _Gaps_ como falta de informação e esses dados não são considerados nas análises.
+
+**4º passo:**
+Baixe o arquivo formatado em _fasta_, como demonstra a figura abaixo:
+
+![image](https://github.com/user-attachments/assets/b0bcab5c-3d6e-4dc1-96ca-cce63b0f0faf)
+
+**5º passo:**
+Infelizmente, o _TNT_ não aceita o formato _fasta__ como _input_. Desta forma, nós teremos que converter a nossa matriz, para o formado _Hennig86_ que é o formato aceito pelo _TNT_.
+
+
+> [!NOTE]
+> **O formato Hinnig86 para sequências pode ser conferido abaixo:**
+>
+> 
+> xread ‘optional title, starting and ending with quotes (ASCII 39)’
+> 
+>nchar ntax
+> 
+>Taxon0 0000000000
+> 
+>Taxon1 0010111000
+> 
+>Taxon2 1011110000
+> 
+>Taxon3 1111111000
+> 
+>…..
+> 
+>TaxonN 1111111000
+> 
+>; ‘<- Note the semicolon (and the way you add comments)!’
+>
+
+O _script_
+
+
+
+
+
+
+
+
+
+
+
+
