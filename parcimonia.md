@@ -236,4 +236,18 @@ proc/;
 ```
 
 
+**6º passo: Visualização da árvore**
+O árquivo gerado é uma árvore com comprimento de ramos e valores de suporte em formato newick. Esta árvore pode ser visualizada com o software iTol online:
+https://itol.embl.de/
+
+Clique em _upload_:
+![image](https://github.com/user-attachments/assets/55133709-484d-4d2c-bae0-cdf520a02974)
+
+
+
+Em seguida faça o upload do arquivo ou copie e cole o conteúdo do arquivo no campo '_Tree text:_'.
+
+
+
+
 
