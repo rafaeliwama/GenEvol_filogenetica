@@ -174,5 +174,66 @@ Onde:
 ```xmult: replic 1000 ratchet 5 nodrift fuse 5 hits 10;``` - Especifica os algorítmos utilizados na busca heurística. Serão: 1000 répicas, 5 rodadas de ratched, não será aplicado drift, 5 rodadas de fuse e a busca terminará quando a árvore atingir 10 hits.
 
 
+**4º passo: Busca heurística**
+
+Inicie a busca heurística:
+
+
+```
+xmult;
+```
+
+Note que o _TNT_ exige o número de réplicas realizadas, o _best score__ da réplica atual, e o número de rearranjos investigados.
+
+
+> [!NOTE]
+> **Qual o _best score_ geral da busca e quantas árvores foram encontradas com este _score_?**
+
+Estas árvores representam hipóteses igualmente prováveis segundo o critério de parsimônia.
+
+Salve os resultados da busca:
+
+```
+save;
+tsave/;
+```
+
+Para visualizar estas árvores de uma maneira significativa, nós podemos utilizar o consenso. Existem vários tipos de consenso, mas nós utilizaremos o consenso de Nelsen, em que os ramos conflituosos forma politomias. Assim, utilize os seguintes comandos para gerar uma árvore de consenso:
+
+```
+nelsen *;
+tchoose /;
+```
+
+**5º passo: Comprimento de ramos e suporte de nós**
+
+Esta árvore de consenso, ainda não possui valores comprimento de ramos e de suporte de nós associados.
+
+Para gerar valores de comprimento de ramos:
+```
+ttags =;
+blength *0;
+tsave *consensus_bootstraps.tnttre;
+```
+
+Nós iremos gerar valores de suporte _Bootstrap_:
+
+```
+resample boot replic 1000;
+```
+
+
+**6º passo: Salvando dados finais**
+
+Por fim, salve os resultados finais e feche todos os arquivos abertos pelo _TNT_:
+
+```
+save*;
+tsave/;
+ttags -;
+log/;
+proc/;
+```
+
 
 
