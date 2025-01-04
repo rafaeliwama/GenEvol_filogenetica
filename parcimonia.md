@@ -237,7 +237,15 @@ proc/;
 
 
 **6º passo: Visualização da árvore**
-O árquivo gerado é uma árvore com comprimento de ramos e valores de suporte em formato newick. Esta árvore pode ser visualizada com o software iTol online:
+O árquivo gerado é uma árvore com comprimento de ramos e valores de suporte. Contudo, o TNT escreve o arquivo de árvore em um formato ... Peculiar. Para visualizar corretamente a árvore nos utilizaremos o script 'tnt_tree_clean.sh'.
+
+
+Execute o script:
+```
+./tnt_tree_clean.sh
+```
+
+O script converte todas as árvores para o formato Newick. A árvore consensus_bootstraps.tnttre.tre contém a árvore final gerada pelo _TNT_. Esta árvore pode ser visualizada com o software iTol online:
 https://itol.embl.de/
 
 Clique em _upload_:
@@ -246,6 +254,8 @@ Clique em _upload_:
 
 
 Em seguida faça o upload do arquivo ou copie e cole o conteúdo do arquivo no campo '_Tree text:_'.
+
+Após o _upload_, clique na aba _advanced_ do painel de controle e ative a visualização do _bootstrap_.
 
 
 
