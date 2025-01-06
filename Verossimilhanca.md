@@ -15,6 +15,16 @@ A principal diferença entre o critéro de máxima parsimônia e o critério da 
 
 Para realizarmos reconstruções utilizando o critério de maxima verossimilhança, nós utilizaremos o _IQTREE_. Diferente do _TNT_, o _IQTREE_ é um programa com um manual exemplar e que contém diversos tutoriais explicando cada uma de suas funcionalidades. O manual do programa pode ser acessado no site: http://www.iqtree.org/doc/
 
+O conteúdo para esta parte do tutorial está disponível na pasta Part2IQTREE do github.
 
+```
+para baixar a pasta
+```
 
+Mude o diretório de trabalho para a pasta 'Part2IQTREE':
+```
+cd Part2IQTREE
+```
+
+Esta pasta contém todos os arquivos necessário para rodar o IQTREE:
 
