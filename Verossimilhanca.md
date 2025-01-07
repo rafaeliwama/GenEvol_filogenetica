@@ -28,3 +28,36 @@ cd Part2IQTREE
 
 Esta pasta contém todos os arquivos necessário para rodar o IQTREE:
 
+```iqtree2``` - arquivo executável do iqtree
+
+```helobdella_COI_GenEvol_aligned.fasta``` - arquivo em formato fasta contendo o alinhamento do dataset de _Helobdella_.
+
+```AlignmentLengthChecker.py``` - script em python para verificar o tamanho do alinhamento.
+
+
+## Definindo partições
+
+Como mencionado anteriormente, métodos de máxima verossimilhança são dependentes de uma matriz de substituição que descreve as probabilidades de determinados tipos de eventos de substituição de nucleotídeos. No exemplo da aula teórica, nós utilizamos um único modelo para todos os sítios da nossa matriz. Contudo, diferentes sítios podem evoluir de maneiras diferentes. Por exemplo, genes diferentes podem estar sob diferentes pressões evolutivas e apresentar taxas diferenciada. Outro exemplo é a posição do nucleotídeo no códon de genes codificates. Como você pode observar na figura abaixo, mudanças no terceiro códon são sinônimas e, portanto, apresentam maiores taxas de substituição.
+
+![f5de6355003ee322782b26404ef0733a1d1a61b0](https://github.com/user-attachments/assets/7852f52c-417e-4fb2-ab62-182036d8c70b)
+
+Nós podemos incorporar estas diferenças, adotando modelos diferentes para diferentes sítios. Para indicar que os programas podem selecionar diferentes modelos, nós precisamos separar a nossa matriz em diferentes partições. Ou seja, blocos de dados em que um modelo será aplicado.
+
+Para indicar as partições da matriz, nós criaremos um aquivo texto contendo o nome da partição, o tipo de dado, as coordenadas da partição e os blocos de dados dentro de cada partição que serão considerados. 
+
+Antes de criarmos o arquivo com a descrição das partições, nós precisamos ter conhecimento do comprimento da nossa matrix, para que nós possamos inserir as coordenadas corretas do das nossas partições. Execute o script ```AlignmentLengthChecker.py``` como na linha abaixo:
+
+```
+python3 AlignmentLengthChecker.py helobdella_COI_GenEvol_aligned.fasta
+
+```
+
+O script deve printar o comprimento do alinhamento.
+
+Em seguida, nós podemos criar um arquivo de texto, utilizando um o nano. Digite ```Nano``` e 
+
+```
+DNA, COI =  1-100
+
+
+```
