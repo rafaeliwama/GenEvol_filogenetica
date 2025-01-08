@@ -45,6 +45,8 @@ Nós podemos incorporar estas diferenças, adotando modelos diferentes para dife
 
 Para indicar as partições da matriz, nós criaremos um aquivo texto contendo o nome da partição, o tipo de dado, as coordenadas da partição e os blocos de dados dentro de cada partição que serão considerados. 
 
+
+**1º Passo: Definindo o comprimento do alinhamento**
 Antes de criarmos o arquivo com a descrição das partições, nós precisamos ter conhecimento do comprimento da nossa matrix, para que nós possamos inserir as coordenadas corretas do das nossas partições. Execute o script ```AlignmentLengthChecker.py``` como na linha abaixo:
 
 ```
@@ -54,10 +56,20 @@ python3 AlignmentLengthChecker.py helobdella_COI_GenEvol_aligned.fasta
 
 O script deve printar o comprimento do alinhamento.
 
-Em seguida, nós podemos criar um arquivo de texto, utilizando um o nano. Digite ```Nano``` e 
-
-```
-DNA, COI =  1-100
+**2º Passo: Criar arquivo de particições**
+Em seguida, nós podemos criar um arquivo de texto, utilizando um o nano. Digite ```Nano``` e digite o texto abaixo, substituindo <comprimento> pelo comprimento do alinhamento:
 
 
 ```
+DNA, COI1 = 1-<comprimento>\3
+DNA, COI2 = 2-<comprimento>\3
+DNA, COI3 = 3-<comprimento>\3
+
+```
+
+Perceba que nós particionamos a matriz em três blocos de dados. O primeiro, 1 em cada 3 nucleotídeos começando pelo primeiro sítio do alinhamento. O segundo, 1 a cada 3 començando pelo segundo sítio do alinhamento e o terceiro, 1 a cada 3 começando pelo terceiro sítio. Desta forma, nós conseguimos atribuir taxas diferentes para cada sítio de um códon no gene COI que é codificante.
+
+
+## Reconstrução filogenética por máxima verossimilhança
+
+
