@@ -73,3 +73,32 @@ Perceba que nós particionamos a matriz em três blocos de dados. O primeiro, 1 
 ## Reconstrução filogenética por máxima verossimilhança
 
 
+**1º Passo: Reconstrução filogenética**
+No próximo passo nós utilizaremos o _IQTREE_ para realizar 3 etapas:
+
+1. Seleção de modelo
+2. Inferência filogenética
+3. _Bootrapping_
+
+O _IQTREE_ é bastante eficiente e faz estas três etapas com apenas uma linha de comando. Digite o seguinte comando e analise as ações que o software realiza:
+
+```
+./iqtree2 -s helobdella_COI_GenEvol_aligned.fasta -T 4 -p helobdella_partitions.txt -m TESTMERGE -mset mrbayes -ninit 1000 -B 1000 -wbt
+```
+
+
+
+Responsa as questões abaixo:
+1. Qual o modelo selecionado pelo _IQTREE_?
+2. Qual a diferença dos modelos selecionados? Utilize o manual do _IQTREE_ para se informar sobre os modelos de substituição! (http://www.iqtree.org/doc/Substitution-Models#dna-models)
+4. Qual o valor de Log Likelihood da árvore selecionada?
+5. Como foi a mudança do Log Likelihood durante a busca de árvores?
+6. Como o tempo e análise difere da árvore de parsimônia reconstruída com o _TNT_?
+
+**2º Passo: Visualização**
+
+Visualize o arquivo com a terminação ```.contree``` no iTOL. Diferente do _TNT_, esta árvore pode ser visualizada diretamente.
+
+Responda as perguntas abaixo:
+1. Você oberva alguma politomia? Como o número de politomias difere do número de politomias da árvore de parsimônia?
+2. Como os comprimentos de ramo diferem dos comprimentos de ramo da árvore de parsimônia? Por que você obeserva esta diferença?
