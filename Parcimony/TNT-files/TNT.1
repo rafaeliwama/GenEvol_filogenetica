@@ -1,0 +1,241 @@
+.\" Manpage for TNT
+.TH man 1 "31 March 2023" "1.6" "TNT man page"
+.SH NAME
+.B TNT \- Tree analysis using New Technology
+.SH SYNOPSIS
+
+.B gTNT
+[ filename ] [ , TNT commands ]
+.br
+.B gTNT
+, [ menu option 1 ] , [ menu option 2 ] 
+.br
+.B tnt
+[ TNT commands ]
+.br
+.B tnt
+bground , [ TNT commands ], &
+.br
+.B runTNT, runtnt
+
+.SH DESCRIPTION
+.P
+TNT is an interactive  program for phylogenetic analysis under parsimony (i.e. it finds trees that allow tracing to common ancestry as many similarities as possible). It has very fast algorithms for finding most parsimonious trees, as well as many facilities for diagnosis and comparison of trees, and evaluation of group supports. It implements analyses under equal weights, with differential weights defined a priori by the user, or with weights determined during the analysis as a result of character interac
+tions (i.e. implied weights or similar methods). It can analyze discrete characters, continuous characters, and landmark characters (2D or 3D). It can also analyze discrete characters that can only take certain states (or become inapplicable) when a superordinate character (or set of characters) takes a specified state(s), or characters that have different transformation costs depending on the states of the superordinate character(s). This can be used to incorporate in the analysis functional dependences between the characters. TNT also offers some options for scoring trees and reconstructing ancestral states or branch lengths under simple probabilistic evolutionary models (e.g. JC69, Mk, or implik models). 
+.SH OPTIONS
+.P
+Options differ slightly for the GUI and command-driven versions. For the GUI version, an argument passed to TNT when invoking it is taken as a file to parse. In the command-driven version, any arguments are taken as TNT commands; the same is true of any arguments passed after a semicolon to the GUI version. For the syntax of TNT commands, see the integrated help system in TNT (under
+.I
+Help
+>
+.I
+Command List
+, or with 
+.I
+help;
+). To avoid having to escape or double quote semicolons from the command-line, commas in the command-line are interpreted as semicolons. 
+.SH DATA FORMAT 
+.P
+For examples of data formats, see the files
+.I
+example.tnt
+,
+.I
+zilla.tnt
+,
+.I
+contin.tnt
+, and
+.I
+landmark_example.tnt
+
+These files should have been copied by the installer to your
+.I
+$HOME/gTNT/Datasets
+directory.
+
+.SH SCRIPTS
+TNT has a scripting language that allows automation of many analyses. See 
+.I
+help+;
+and 
+.I
+help runc;
+at the TNT command-line for details. Example scripts can be found at
+.I
+https://www.lillo.org.ar/phylogeny/tnt/scripts/ 
+(in TNT-style) and at
+.I
+https://www.lillo.org.ar/phylogeny/eduscripts/ 
+(in C-style).
+.SH FILES
+
+.HP
+\[ti]/gTNT/gTNT
+.RS
+binary for the GUI version
+.RE
+.HP
+\[ti]/gTNT/tnt
+.RS
+binary for the command-driven version; this is also used 
+as engine for analyses in parallel (called by the
+.I
+PVM
+daemon)
+.RE
+.HP
+\[ti]/gTNT/gTNT-starter.sh
+.RS
+script that starts gTNT (GUI version), automatically loading the
+.I
+PVM
+daemon if not yet loaded. This is automatically invoked by the ALIAS
+.I
+runTNT
+.RE
+.HP
+\[ti]/gTNT/cTNT-starter.sh
+.RS
+script that starts tnt (command-driven version), automatically
+loading the
+.I
+PVM
+daemon if not yet loaded. Automatically invoked by the ALIAS
+.I
+runtnt
+.RE
+
+.HP
+/usr/local/bin/mpitnt
+.RS
+Binary file for parallel analyses using OpenMPI (requires separate installation of OpenMPI)
+.RE
+
+.HP
+\[ti]/.tnt_guistory
+.RS
+A file used by
+.I
+gTNT
+to store current preferences (displaying of node numbers in trees, timing enabled, colors for mapping characters, checking for typos in input searching closest matching command, &c). This file can be removed (removing it resets all options to their default values), but should not be modified
+.RE
+.HP
+\[ti]/.tnt_treestory
+.RS
+A file used by
+.I
+gTNT
+to store the settings for tree-drawing (branch thickness, font size, label displacement, &c). Starting a new TNT session reestablishes the values of the last session (these can be reset to their factory values with
+.I
+Format
+>
+.I
+Reset tree drawing options
+)
+.RE
+.HP
+\[ti]/.tnt_history
+.RS
+A file used by
+.I
+tnt
+to store the commands typed at the command-prompt. At the command-prompt, pressing
+.I
+tab
+repeats all the commands in the
+.I
+history 
+(or all the commands that match the string provided)
+.RE
+.HP
+\[ti]/.tnt_command_history
+.RS
+A file used by gTNT to store the commands typed; this is a
+.I
+readline
+file and should not be modified by the user
+.RE
+
+
+.SH ALIASES
+.HP
+runTNT
+.RS
+an alias for calling
+.I
+gTNT-starter.sh
+; can be used anywhere. This takes a filename as argument.
+.RE
+.HP
+runtnt
+.RS
+an alias for calling
+.I
+cTNT-starter.sh
+; can be used anywhere. This takes a filename as argument.
+.RE
+.HP
+PVM
+.RS
+an alias for loading and controlling the
+.I
+PVM
+daemon. Options
+are
+.I
+init
+(of obvious meaning),
+.I
+reset
+(kills any
+pending
+.I
+tnt
+processes, freeing memory), and
+.I
+halt
+(terminates the daemon, as well as any pending tasks). See documentation for PVM for further details.
+.RE
+
+.SH HISTORY
+TNT began in 1998 as a joint project of Steve Farris, Kevin Nixon, and Pablo Goloboff. It uses techniques and methods formerly in Farris'
+.I
+Hennig86
+, Goloboff's
+.I
+Nona
+and
+.I
+PeeWee
+, and Nixon's
+.I
+Dada
+and 
+.I
+WinClada.
+Officially released as version 1.0 in 2003, moved to version 1.5 in 2016, and to version 1.6 in 2022. Since 2007, it has been supported and subsidized by the Willi Hennig Society.
+.SH BUGS
+The programs are under active development and we are continually fixing bugs or adding new behaviour. We only keep a list of the bugs that have been fixed, at 
+.I
+https://www.lillo.org.ar/phylogeny/tnt/BugFixes.htm
+.SH AUTHORS AND URL 
+Pablo A. Goloboff (
+.I
+pablogolo@yahoo.com.ar
+), Kevin C. Nixon (
+.I
+kcn2@cornell.edu
+), and James S. Farris (
+.I
+jamessfarris@gmail.com
+), with contributions from Martin Morales (
+.I
+martineduardomorales@hotmail.com
+) and Santiago Catalano (
+.I
+sacatalano@gmail.com
+). The program can be downloaded from
+.I
+https://www.lillo.org.ar/phylogeny/tnt 
+

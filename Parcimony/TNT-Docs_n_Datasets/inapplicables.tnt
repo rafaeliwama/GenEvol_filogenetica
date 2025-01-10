@@ -1,0 +1,34 @@
+nsta 32 ; 
+xread
+'Test dataset for inapplicables' 9 14
+a  0  -  -  -  -  -  -  0  0
+b  0  -  -  -  -  -  -  0  0
+c  0  -  -  -  -  -  -  0  0
+d  0  -  -  -  -  -  -  0  0
+e  0  -  -  -  -  -  -  0  0
+f  1  0  0  -  1  0  0  0  0
+g  1  0  0  -  1  0  1  1  0
+h  1  0  1  0  1  1  0  1  0
+i  1  0  1  1  0  -  -  1  0
+j  1  0  1  1  0  -  -  0  0
+k  1  1  1  1  0  -  -  0  1
+l  1  1  0  -  1  0  0  0  1
+m  1  1  1  0  0  -  -  0  1
+n  1  1  1  0  1  0  1  0  1
+;
+macro=;    /**   <--- enable macros and comments, no 
+                      need to do this unless you want 
+                      to include comments  *****/
+cname      
+{0 sup_tail absent present ; 
+   {1 sub_tail_color red blue ; 
+   {2 sub_tail_sup_knob absent present ; 
+      {3 sub_knob_cover scaly smooth hairy ; 
+   {4 sub_tail_sup_apophysis absent present ; 
+      {5 sub_apophysis_texture rigid flexible ; 
+      {6 sub_apophysis_color black white ; 
+{7 one_independent_character one two ; 
+{8 another_independent_character one two ; /*** Note multiple dependences, indentation used as an aid for 
+                                            visualizing dependences *****/
+smat & ;   /***  <----  recode the hierarchy into the main character, deactivate the others ******/
+proc/; 

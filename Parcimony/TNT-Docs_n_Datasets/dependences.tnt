@@ -1,0 +1,105 @@
+macro = ;                    /* connect macros so as to enable comments (¡this!) *****/
+xwipe ;                      /* erase previous dataset, so that you change number of links *****/
+xlinks = 32 ;                /* enable links (with up to 32 primaries per dependent character)  ***/
+xread 
+'
+
+--------------------------------------------------
+A dataset to exemplify the use of (some of) the 
+options to specify dependences between characters
+--------------------------------------------------
+
+'
+24 10 
+A                0- 00 000 010 00--- 0100 00 000
+B                0- 00 000 001 01-0- 0010 00 000
+C                0- 01 000 111 00--- 0001 00 110
+D                0- 12 110 010 100-- 1100 00 011
+E                0- 12 101 011 100-- 1011 01 110
+F                10 11 110 001 1101- 1110 11 000
+G                10 11 001 111 11110 0010 11 111
+H                11 12 000 100 11111 1000 11 101
+I                11 00 000 011 1110- 0100 10 110
+J                11 01 000 101 01-0- 0001 10 100
+;
+                             /* To refer to character by names, you need to define names first (duhhh!) 
+                                Note that characters 15-18 are unnamed; you don't need to name all characters
+                                for defining links                           
+                             ****/
+cnames 
+{0 tail abs pres ; 
+{1 color_of_tail red blue ; 
+{2 habits walker climber ; 
+{3 fingers smooth claws sucker ; 
+{4 biceps weak strong ; 
+{5 ant_tendon small large ; 
+{6 post_tendon small large ; 
+{7 lungs abs pres ; 
+{8 tracheae abs pres ; 
+{9 cutaneous_respiration no yes ; 
+{10 first_leg abs pres ; 
+{11 second_leg abs pres ; 
+{12 post_apophy_on_first_leg abs pres ; 
+{13 ant_apophy_on_second_leg abs pres ; 
+{14 contact_between_apophyses wide narrow ; 
+{19 grasping_mechanism no yes ; 
+{20 hunters no yes ; 
+{21 wings abs pres ; 
+{22 feathers abs pres ; 
+{23 pneumatic_bones no yes ; 
+
+                             /* Can't have a tail color with no tail ****/
+xlinks = tail abs < color_of_tail - > ; 
+
+                             /* To climb walls, fingers must have claws or suckers  ****/
+xlinks = habits climber < fingers ~ smooth > ; 
+
+                             /* A strong biceps would tear tendons if both weak ****/
+xlinks = biceps strong < ant_tendon large | post_tendon large > ;
+    
+                             /* The animal must breath with either lungs, tracheae, or skin ****/
+xlinks = lungs abs  < tracheae pres  | cutaneous yes > 
+         tracheae abs < lungs pres | cutaneous yes  > ; 
+
+                             /* Can't have apophyses if no leg; can't have a contact 
+                                if any of the apophyses is absent or inapplicable ******/
+xlinks =
+      first_leg abs < post_apoph - >
+      second_leg abs < ant_apoph - >
+      post_apoph abs - | ant_apoph abs - < contact - > ;  
+
+                             /* When char 15 has state 0, then one, and only one, of 
+                                chars 16-18 must have state 1. BTW, this shows that the 
+                                dependences can be defined using character and state 
+                                numbers as well (e.g. when no character names defined) ****/
+xlinks = 
+   15 0 < ( 16 1 & 17 0 & 18 0 ) | ( 16 0 & 17 1 & 18 0 ) | ( 16 0 & 17 0 & 18 1 ) > ; 
+
+                             /* Hunters use the grasping mechanism to hold prey; thus, the researcher
+                                thinks that a non-hunter is unlikely to have a grasping mechanism. 
+                                The "<+" option penalizes changes into/from non-hunters with a 
+                                grasping mechanism (without forbidding them completely, as they 
+                                are observed in some terminal taxa). This is more likley to group
+                                non-hunters with a grasping mechanism, and can changes mappings.          ****/ 
+xlinks = grasping_mechanism yes <+1 hunters yes > ; 
+
+                             /* This is a dynamic link: Acquiring pneumatic bones is unlikely if happening 
+                                together with a loss of flying ability (i.e. a loss of feathers or wings) ****/
+xlinks wings / pres > abs | 
+       feathers / pres > abs  
+          [+1 pneumatic_bones no > yes ] ; 
+
+                             /* Another type of dynamic link: if two reductions in wing ability occur, the 
+                                third one comes together and does not cost anything (i.e. the 3 simultaneous
+                                changes cost 2 steps, instead of 3; any 2 would cost 2). This changes the 
+                                step-matrix created from the previous link.                               ****/
+xlinks : 
+     wings pres > abs  
+     feathers pres > abs  
+     pneumatic_bones yes > no =-1 ; 
+
+vlinks - ;                   /* Display the character complexes that were just defined... *****/    
+        
+proc/;    
+
+

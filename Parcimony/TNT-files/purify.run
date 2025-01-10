@@ -1,0 +1,23 @@
+macro=;
+if ( !argnumber ) errmsg Give name of file to purify ; end
+hifile open %1 ;
+set 0 0 ;
+set 1 0 ; 
+lquote[; lquote=;
+log nuevo ;
+loop 1 1
+   set 0 hifchar ;
+   if ( hifeof ) endloop ; end
+   if ( '0' == 13 ) set 1 ++ ; setloop 1 ; end
+   quote &'0' ;
+   setloop 1 ;
+   stop
+log / ;
+hifile close ;
+system cp nuevo %1 ; 
+sil-all;
+quote REPLACED '1' NEWLINE CHARS;
+pause ; 
+proc/;
+
+   
