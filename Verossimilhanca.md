@@ -30,7 +30,7 @@ Esta pasta contém todos os arquivos necessário para rodar o IQTREE:
 
 ```iqtree2``` - arquivo executável do iqtree
 
-```helobdella_COI_GenEvol_aligned.fasta``` - arquivo em formato fasta contendo o alinhamento do dataset de _Helobdella_.
+```helobdella_GenEvol_dataset_aligned.fasta``` - arquivo em formato fasta contendo o alinhamento do dataset de _Helobdella_.
 
 ```AlignmentLengthChecker.py``` - script em python para verificar o tamanho do alinhamento.
 
@@ -50,7 +50,7 @@ Para indicar as partições da matriz, nós criaremos um aquivo texto contendo o
 Antes de criarmos o arquivo com a descrição das partições, nós precisamos ter conhecimento do comprimento da nossa matrix, para que nós possamos inserir as coordenadas corretas do das nossas partições. Execute o script ```AlignmentLengthChecker.py``` como na linha abaixo:
 
 ```
-python3 AlignmentLengthChecker.py helobdella_COI_GenEvol_aligned.fasta
+python3 AlignmentLengthChecker.py helobdella_GenEvol_dataset_aligned.fasta
 
 ```
 
