@@ -64,7 +64,7 @@ Utilize o nano para salvar o alinhamento em formato fasta.
 nano
 ```
 
-Siga as instruções do programa para salvar o arquivo com o nome ```helobdella_COI_GenEvol_aligned.fasta```.
+Siga as instruções do programa para salvar o arquivo com o nome ```helobdella_GenEvol_dataset_aligned.fasta```.
 
 
 **5º passo:**
