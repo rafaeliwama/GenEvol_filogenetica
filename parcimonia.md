@@ -55,9 +55,17 @@ Em alguns segundos, você poderá observar os resultados. Perceba que foram adic
 > Não é possível através de um alinhamento como este diferenciar a falta de informação sobre um sítio de um indel. Por este motivo, nas análises filogenéticas é comum considerar _Gaps_ como falta de informação e esses dados não são considerados nas análises.
 
 **4º passo:**
-Baixe o arquivo formatado em _fasta_, como demonstra a figura abaixo:
+Copie o texto formatado em _fasta_, como demonstra a figura abaixo:
 
 ![image](https://github.com/user-attachments/assets/b0bcab5c-3d6e-4dc1-96ca-cce63b0f0faf)
+
+Utilize o nano para salvar o alinhamento em formato fasta.
+```
+nano
+```
+
+Siga as instruções do programa para salvar o arquivo com o nome ```helobdella_COI_GenEvol_aligned.fasta```.
+
 
 **5º passo:**
 Infelizmente, o _TNT_ não aceita o formato _fasta__ como _input_. Desta forma, nós teremos que converter a nossa matriz, para o formado _Hennig86_ que é o formato aceito pelo _TNT_.
