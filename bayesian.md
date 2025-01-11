@@ -18,6 +18,10 @@ Onde:
 3. P(D|T): é o valor de verossimilhança que nós já aprendemos a calcular na aula teórica
 4. P(D): é a probabilidade marginal.
 
-A P(D) pode ser definida como o cálculo da probabilidade de se obter os dados, segundo qualquer modelo evolutivo. O cálculo da P(D) é extremamente dificil de ser computado empiricamente, mas nós podemos utilizar 
+A P(D) pode ser definida como o cálculo da probabilidade de se obter os dados, segundo qualquer modelo evolutivo. O cálculo da P(D) é extremamente dificil de ser computado empiricamente, mas nós podemos utilizar o algorítmo chamado Markov Chain Monte Carlo (MCMC) para amostrar um grupo de  distribuições de probabilidade.
+
+Vários softwares utilizam o MCMC para a rescontrução filogenética. Hoje nós utilizaremos o MrBayes.
+
+
 
 
