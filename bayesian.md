@@ -100,11 +100,28 @@ Observe que nós temos seis possíveis taxas de substituição. Uma para cada se
 5. Nós indicaremos ao _MrBayes_ cada um destes parâmetros atráves das seguintes linhas de comando:
    
 ```
-
+lset applyto=(1) nst=6 rates=invgamma ngammacat=4;
 ```
 
+Onde:
+```nst``` - É o número de possíveis taxas de substituição.
+```rates``` - Descreve se o modelo permite sítios invariáveis e como é a variação entre sítios (+I+G)
+```ngammacat``` - é o número ótimo de categorias de taxas de substituição na distribuição gamma.
 
+> [!NOTE]  
+> Como o parametro F do modelo é padrão para o modelo GTR não é preciso indicar este parâmetro na linha de comando.
+
+
+**Partições coi2 e coi3:**
 Da mesma forma que nós fizemos aqui, é possível extrair informações sobre todos os modelos de susbstituição utilizados em análises filogenéticas.  
+Acrescente as seguintes linhas no arquivo NEXUS:
+
+```
+lset applyto=(2) nst=6 rates=invgamma ngammacat=4;
+lset applyto=(3) nst=6 rates=gamma ngammacat=4;
+
+prset applyto=(2) statefreqpr=fixed(equal);
+```
 
 
 
