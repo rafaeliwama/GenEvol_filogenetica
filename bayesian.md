@@ -51,17 +51,22 @@ Diferente do que nós fizemos no _TNT_ e no _IQTREE_, todos os comandos utilizad
 2. Ao final do arquivo, após o comando ```END;```, digite: ```begin MRBAYES``` em uma nova linha. Este comando inicia um _MrBayes block_
 3. Em uma nova linha, digite o comando ```log start filename=helobdella_COI_log.txt;```. Este comando faz com que o _MrBayes_ escreva um arquivo log, que é importante para consulta após o término da análise.
 
+Perceba uma característica importante em um arquivo NEXUS. Comandos terminam em ```;```!!!
+
 **3º passo:** Particionando a matriz.
 
-Assim como no _IQTREE_, é possível selecionar modelos diferentes para blocos diferentes. Nós particionaremos a matriz da mesma forma que nós particionamos os dados no _IQTREE_, ou seja, por posição do nucleotídio em um códon. Siga os passos abaixo:
+Assim como no _IQTREE_, é possível selecionar modelos diferentes para blocos diferentes. Nós particionaremos a matriz da mesma forma que nós particionamos os dados no _IQTREE_, ou seja, por posição do nucleotídio em um códon.
 
 1. Em uma nova linha do arquivo NEXUS, digite:
+   
+```
+charset coi1 = 1-674\3;
+charset coi2 = 2-674\3;
+charset coi3 = 3-674\3;
 ```
 
-```
-
-
-Porém, diferente do _IQTREE_, o MrBayes não seleciona o melhor modelo para as partições definidas. Ou seja, é preciso fazer esta seleção préviamente em um outro programa. Para nossa sorte, o _IQTREE_ realiza esta seleção.
+**4º passo:**
+Diferente do _IQTREE_, o MrBayes não seleciona o melhor modelo para as partições definidas. Ou seja, é preciso fazer esta seleção prévia em um outro programa. Para nossa sorte, o _IQTREE_ realiza esta seleção e nós podemos utilizar o mesmo esquema de partições.
 
 
 1. 
