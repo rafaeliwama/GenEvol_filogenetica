@@ -20,8 +20,17 @@ Onde:
 
 A P(D) pode ser definida como o cálculo da probabilidade de se obter os dados, segundo qualquer modelo evolutivo. O cálculo da P(D) é extremamente dificil de ser computado empiricamente, mas nós podemos utilizar o algorítmo chamado Markov Chain Monte Carlo (MCMC) para amostrar um grupo de  distribuições de probabilidade.
 
-Vários softwares utilizam o MCMC para a rescontrução filogenética. Hoje nós utilizaremos o MrBayes.
+Vários softwares utilizam o MCMC para a rescontrução filogenética. Hoje nós utilizaremos o _MrBayes_.
 
 
+## O formato NEXUS de árquivos
+
+Um dos formatos de arquivos mais populares na bioinformática é o formato NEXUS. Este tipo de arquivo pode conter vários tipos de informação, como por exemplo: sequências, alinhamentos, árvores, códigos genéticos, distâncias filogenéticas, modelos, e até comandos para determinados programas. Um característica particular do formato nexus é o seu potencial para armazenar diversos tipos de informação em um único arquivo. Isso só é possível graças a organização em blocos. Cada arquivo NEXUS pode conter múltiplo blocos que podem armazenar sets de informações diferentes, do mesmo tipo ou de tipos diferentes.
+
+Este é o caso do arquivo de input para o _MrBayes_ que nós utilizaremos.
+
+
+### 1º passo: obtendo um alinhamento em formato NEXUS
+Lembre que até o momento, nós apenas utilizamos alinhamentos no formato Hennig86 (para o _TNT_) e o formato fasta para o _IQTREE_. Desta forma, nosso primeiro passo é converter um dos alinhamentos para o formato NEXUS. Nós utilizaremos o alinhamento em formato fasta para isso.
 
 
