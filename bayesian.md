@@ -30,7 +30,42 @@ Um dos formatos de arquivos mais populares na bioinformática é o formato NEXUS
 Este é o caso do arquivo de input para o _MrBayes_ que nós utilizaremos.
 
 
-### 1º passo: obtendo um alinhamento em formato NEXUS
+**1º passo:** obtendo um alinhamento em formato NEXUS
 Lembre que até o momento, nós apenas utilizamos alinhamentos no formato Hennig86 (para o _TNT_) e o formato fasta para o _IQTREE_. Desta forma, nosso primeiro passo é converter um dos alinhamentos para o formato NEXUS. Nós utilizaremos o alinhamento em formato fasta para isso.
+
+Utilize o script ```fasta2nexus.py``` para converter o alinhamento:
+
+```
+python3 fasta2nexus.py helobdella_GenEvol_dataset_aligned.fasta
+
+```
+
+Este comando deve criar o arquivo ```helobdella_GenEvol_dataset_aligned.nex```. Este será o arquivo de input para o MrBayes. Contudo, apenas o bloco do alinhamento está contido neste arquivo. 
+
+
+**2º passo:** Criando o bloco MrBayes no arquivo NEXUS
+
+Diferente do que nós fizemos no _TNT_ e no _IQTREE_, todos os comandos utilizados pelo MrBayes serão especificados em um bloco específico do arquivo NEXUS. Nós chamaremos este bloco de _MrBayes block_. Para isso, siga as instruções à seguir:
+
+1. Abra o arquivo ```helobdella_GenEvol_dataset_aligned.nex``` no seu editor de texto.
+2. Ao final do arquivo, após o comando ```END;```, digite: ```begin MRBAYES``` em uma nova linha. Este comando inicia um _MrBayes block_
+3. Em uma nova linha, digite o comando ```log start filename=helobdella_COI_log.txt;```. Este comando faz com que o _MrBayes_ escreva um arquivo log, que é importante para consulta após o término da análise.
+
+**3º passo:** Particionando a matriz.
+
+Assim como no _IQTREE_, é possível selecionar modelos diferentes para blocos diferentes. Nós particionaremos a matriz da mesma forma que nós particionamos os dados no _IQTREE_, ou seja, por posição do nucleotídio em um códon. Siga os passos abaixo:
+
+1. Em uma nova linha do arquivo NEXUS, digite:
+```
+
+```
+
+
+Porém, diferente do _IQTREE_, o MrBayes não seleciona o melhor modelo para as partições definidas. Ou seja, é preciso fazer esta seleção préviamente em um outro programa. Para nossa sorte, o _IQTREE_ realiza esta seleção.
+
+
+1. 
+
+
 
 
