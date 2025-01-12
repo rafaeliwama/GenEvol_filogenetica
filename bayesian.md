@@ -173,3 +173,12 @@ Onde:
 
 
 ## Rodando a análise
+
+Para iniciar a análise é preciso executar o _MrBayes_ pelo terminal. Digite: ```mb```
+
+
+Uma vez que o programar iniciar, digite ```exec helobdella_GenEvol_dataset_aligned.nex```.
+
+Você deve observar, que o número de gerações completadas é printado no canto esquerdo do terminal e que a cada 5 mil gerações o desvio padrão das frequências (SDSF) é printado. Esta é uma medida da diferença entre probabilidades posteriores amostradas pelas diferentes corridas de MCMC. Convergência total da análise resulta em um valor de 0. Ou seja, as amostragem são identicas. Porém, valores aceitáveis de SDSF são <0.01. 
+
+Algumas análises nunca atingem valores de SDSF aceitáveis, porém outros critérios podem indicar que as análises convergiram de forma aceitavel. Nós podemos avaliar estes critérios com o pograma _Tracer_
