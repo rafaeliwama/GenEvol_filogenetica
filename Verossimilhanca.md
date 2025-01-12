@@ -83,7 +83,7 @@ No próximo passo nós utilizaremos o _IQTREE_ para realizar 3 etapas:
 O _IQTREE_ é bastante eficiente e faz estas três etapas com apenas uma linha de comando. Digite o seguinte comando e analise as ações que o software realiza:
 
 ```
-./iqtree2 -s helobdella_COI_GenEvol_aligned.fasta -T 4 -p helobdella_partitions.txt -m TESTMERGE -mset mrbayes -ninit 1000 -B 1000 -wbt
+./iqtree2 -s helobdella_GenEvol_dataset_aligned.fasta -T 4 -p helobdella_partitions.txt -m TESTMERGE -mset mrbayes -ninit 1000 -B 1000 -wbt
 ```
 
 
