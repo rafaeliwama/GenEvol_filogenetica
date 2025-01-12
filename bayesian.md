@@ -82,11 +82,29 @@ Contudo, o _MrBayes_ não é possível indicar os modelos de substituição para
 
 Dois comandos são utilizados para indicar os parâmetros do modelo de substitição: ```lset``` e ```prset```. Enquanto o primeiro é utilizado para descrever as taxas de substituição do modelo de substituição, o segundo é utilizado para descrever os priors, inclusive os priors do modelo de substituição.
 
-Vamos começar pela análise dos modelos selecionados. Você pode achar informações sobre estes modelos pesquisado no Google. Há vários websites que podem te dar as informações necessárias sobre cada parâmetro. Eu gosto bastante do manual do IQTREE: http://www.iqtree.org/doc/Substitution-Models
+Vamos começar pela análise dos modelos selecionados. Você pode achar informações sobre estes modelos pesquisado no Google. Há vários websites que podem te dar as informações necessárias sobre cada parâmetro. Eu gosto bastante do manual do IQTREE (http://www.iqtree.org/doc/Substitution-Models) e o site do Evomics (https://evomics.org/resources/substitution-models/nucleotide-substitution-models/)
 
-**Partição coi1:** O modelo selecionado foi o GTR+F+I+G4. Este modelo 
+**Partição coi1:** O modelo selecionado foi o GTR+F+I+G4. 
+1. O modelo GTR é chamdo de _General Time Reversible Model_ e permite que taxas de substituição e frequência entre nucleotídeos e sejam desiguais. É o modelo com amplo, ou seja, com alto número de parâmetros livres. A figura abaixo, mostra as possíveis taxas de substituições diferentes adotados pelo modelo:
+
+![image](https://github.com/user-attachments/assets/af1bd2f1-5a6e-4ffd-901e-8c4ab5131b3e)
+
+Observe que nós temos seis possíveis taxas de substituição. Uma para cada seta reversível na figura. As setas reversíveis indicam que as taxas de substiuição iguais, independente da direção. Esta é uma característica importante de modelos de substituição de modelos ditos ```time reversible```.
+
+2. A letra F do modelo selecionado indica que as frequências de cada nucleotídeo deve ser inferido através dos dados e este é o padrão para o modelo GTR.
+
+3. A letra I indica que o modelo permite uma proporção de sítios não-variáveis, ou seja, que permanecerão sem mudança nenhuma.  
+
+4. A letra G indica que entre os sítios desta partição há variação das taxas de substituição que obedecem uma distribuição do tipo gamma. O número 4 indica que o número ótimo de categorias de taxas é 4.
+
+5. Nós indicaremos ao _MrBayes_ cada um destes parâmetros atráves das seguintes linhas de comando:
+   
+```
+
+```
 
 
+Da mesma forma que nós fizemos aqui, é possível extrair informações sobre todos os modelos de susbstituição utilizados em análises filogenéticas.  
 
 
 
