@@ -64,12 +64,28 @@ charset coi1 = 1-674\3;
 charset coi2 = 2-674\3;
 charset coi3 = 3-674\3;
 ```
+2. Após indicar para _MrBayes_ quais são as particições, nós precisamos carregar estas partições na memória do programa. Para copie os comandos no arquivo NEXUS:
+   
+```
+partition bestScheme = 3: coi1, coi2, coi3;
+set partition = bestScheme;
+```
+Estes comandos nomeiam um conjunto de partições (bestScheme) formado por três partições como 'coi1', 'coi2' e 'coi3'.
+
 
 **4º passo:**
 Diferente do _IQTREE_, o MrBayes não seleciona o melhor modelo para as partições definidas. Ou seja, é preciso fazer esta seleção prévia em um outro programa. Para nossa sorte, o _IQTREE_ realiza esta seleção e nós podemos utilizar o mesmo esquema de partições.
 
+O arquivo terminado em ```.best_scheme.nexus``` contem a seleção do melhor modelo para cada partição. as linhas após ```charpartition mymodels =``` descrevem os modelos.
 
-1. 
+Contudo, o _MrBayes_ não é possível indicar os modelos de substituição para cada partição pelo seu nome ou sigla. É preciso indicar cada parametro do modelo separadamente.
+
+Dois comandos são utilizados para indicar os parâmetros do modelo de substitição: ```lset``` e ```prset```. Enquanto o primeiro é utilizado para descrever as taxas de substituição do modelo de substituição, o segundo é utilizado para descrever os priors, inclusive os priors do modelo de substituição.
+
+Vamos começar pela análise dos modelos selecionados. Você pode achar informações sobre estes modelos pesquisado no Google. Há vários websites que podem te dar as informações necessárias sobre cada parâmetro. Eu gosto bastante do manual do IQTREE: http://www.iqtree.org/doc/Substitution-Models
+
+**Partição coi1:** O modelo selecionado foi o GTR+F+I+G4. Este modelo 
+
 
 
 
