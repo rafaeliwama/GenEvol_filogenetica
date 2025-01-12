@@ -73,7 +73,7 @@ set partition = bestScheme;
 Estes comandos nomeiam um conjunto de partições (bestScheme) formado por três partições como 'coi1', 'coi2' e 'coi3'.
 
 
-**4º passo:**
+**4º passo:** Indicando modelos de substituição
 Diferente do _IQTREE_, o MrBayes não seleciona o melhor modelo para as partições definidas. Ou seja, é preciso fazer esta seleção prévia em um outro programa. Para nossa sorte, o _IQTREE_ realiza esta seleção e nós podemos utilizar o mesmo esquema de partições.
 
 O arquivo terminado em ```.best_scheme.nexus``` contem a seleção do melhor modelo para cada partição. as linhas após ```charpartition mymodels =``` descrevem os modelos.
@@ -123,5 +123,52 @@ lset applyto=(3) nst=6 rates=gamma ngammacat=4;
 prset applyto=(2) statefreqpr=fixed(equal);
 ```
 
+**5º passo:** Indicando _priors_
+
+Como mencionado na aula teórica, análises bayesianas consistem na atualição dos _priors_ pelos valores de verossimilhança. Desta forma, nós precisamos estabelecer quais são estes _priors_. Como nós não temos informações sobre as expectativas da análise, nós utilizaremos _priors_ não informativos. 
+
+Digite as seguintes linhas no arquivo NEXUS:
+
+```
+prset applyto=(all) ratepr=variable;
+unlink statefreq=(all) revmat=(all) shape=(all) pinvar=(all) tratio=(all);
+```
+
+Onde: 
+1. ```ratepr=variable```: indica que a taxa de substituição varia independentemente entre as partições.
+2. ```statefreq=(all)```: indica que a frequência de cada estado de caractere é calculado com base no dataset
+3. ```revmat=(all)```: indica que erão utilizados as taxas de substituição do modelo GTR
+4. ```shape=(all)```: indica que será utilizado uma distribuição do tipo gamma
+5. ```pinvar=(all)```: indica que todos os sítios podem ser considerados como invariáveis
+6. ```tratio=(all)```: indica que todos os sites podem apresentar transições ou transversões.
+
+**6º passo:** Simulações de MCMC
+
+Agora, é preciso indicar os parâmetros para os simulações do MCMC, que gerarão as distribuições de probabilidade posterior que gerará a árvore.
+
+Em uma nova linha do seu arquivo NEXUS, digite:
+
+```
+mcmcp ngen=150000 printfreq=1000 samplefreq=1000 nruns=2 nchains=4 starttree=random filename=allNuc relburnin=yes burninfrac=0.25 savebrlens=yes;
+mcmc;
+```
+
+**6º passo:** O fim do _bayes block_
+
+Para finalizar o _bayes block_, acrescente as seguintes linhas no arquivo NEXUS:
+
+```
+sump;
+sumt contype=halfcompat;
+log stop;
+
+END;
+```
+
+Onde:
+1. ```sump;``` - gera um resumo das estatísticas da análise
+2. ```sumt contype=halfcompat;``` - indica o tipo de consenso utilizado. Neste caso é um consenso de maioria 50%. Ou seja, apenas clados presentes em pelo menos 50% das árvores amostradas na distribuuição posterior serão mantidas.
+3. ```log stop;``` -  fecha o arquivo log iniciado no início do documento
+4. ```END;``` - termina o _bayes block_
 
 
