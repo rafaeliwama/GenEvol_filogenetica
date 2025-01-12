@@ -172,3 +172,4 @@ Onde:
 4. ```END;``` - termina o _bayes block_
 
 
+## Rodando a análise
