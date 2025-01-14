@@ -15,7 +15,16 @@ A figura abaixo representa o número de árvores possíveis para um dataset *n* 
 
 Existem vários softwares para reconstrução filogenética utilizando o critério de parcimônia. O TNT (_Tree Analysis using New Technology_) é um software bastante robusto para este tipo de análise, pois implementa algorítmos poderos de busca heurística. Durante este tutorial, nós utilizaremos o TNT para a reconstrução filogenética do dataset de _Helobdella_.
 
+Antes de tudo, mude o diretório de trabalho atual para `Parcimony`:
+
+```
+cd Parcimony
+```
+
 Abra baixe e abra o arquivo 'helobdella_COI_GenEvol.fasta' em editor de text. Você pode utilizar o notepad, por exemplo. Contudo, outros editores de texto estão disponíveis.
+
+> [!IMPORTANT]
+> Esta etapa deve ser feita pela interface gráfica!
 
 Note que o arquivo possui uma estrutura específica. Esta é a estrutura:
 
@@ -119,7 +128,7 @@ Caso seja a primeira vez que você executou o _TNT_, você precisará aceitar os
 
 Após executar o _TNT_, você deverá observar a seguinte tela:
 
-![image](https://github.com/user-attachments/assets/e2ea46cd-a1e8-466d-a428-7e9da6af3d18)
+![image](https://github.com/user-attachments/assets/344d096c-177b-416b-8e8f-980b6f99fbff)
 
 Observe que o prompt do terminal foi substituido pelo prompt do _TNT_, indicado pela seta.
 
@@ -257,13 +266,23 @@ O script converte todas as árvores para o formato Newick. A árvore consensus_b
 https://itol.embl.de/
 
 Clique em _upload_:
-![image](https://github.com/user-attachments/assets/55133709-484d-4d2c-bae0-cdf520a02974)
+![image](https://github.com/user-attachments/assets/3e763b0e-c8f0-427d-8cbe-d137d1d1eeb2)
 
 
 
 Em seguida faça o upload do arquivo ou copie e cole o conteúdo do arquivo no campo '_Tree text:_'.
 
 Após o _upload_, clique na aba _advanced_ do painel de controle e ative a visualização do _bootstrap_.
+
+
+**6º passo: retornando ao diretório do curso**
+Antes de terminar este tutorial, volte para o diretório inicial do curso. Digite:
+
+```
+cd ..
+```
+
+Utilize o `pwd` para verificar se seu diretório atual é o `GenEvol_filogenetica`.
 
 
 
