@@ -183,12 +183,22 @@ Você deve observar, que o número de gerações completadas é printado no cant
 
 Algumas análises nunca atingem valores de SDSF aceitáveis, porém outros critérios podem indicar que as análises convergiram de forma aceitavel. Nós podemos avaliar estes critérios com o pograma _Tracer_
 
+## Avaliando a convergência das corridas de MCMC
+
+Como mencionado anteriormente, as corridas de MCMC convergem quando possuem distribuição muito semelhantes entre si, ou seja, quando possuem valores de SDSF > 0.01; Contudo, algumas corridas podem não atingir valores aceitáveis de SDSF mesmo após dezenas de milhares de gerações. Esta é uma situação não ideal, mas nós podemos avaliar a convergência por outros critérios.
+
+O _MrBayes_ gera vários arquivos intermediários, incluindo dois arquivos terminados em ```.p```. Estes arquivos armazenam informações informações importantes sobre as corridas de MCMC (um arquivo para cada corrida) que podem ser visualizados pelo programa _Tracer_
+
+**1 passo:** Abra o programa _Tracer_ e importe os arquivos ```.p``` simultaneamente.
+
+O painel indicado pelo retângulo vermelho, na figura abaixo, informa a média dos valores de verossimilhança da árvore e de cada transformação, e o tamanho da amostra efetiva (ESS) para cada um deles. O ideal é que os valores de ESS sejam >200. O primeiro item desta lista, é o _LnL_ que indica os valores e mostra as estatísticas das árvores amostradas em geral. Clique neste item da lista deste painel e observe a distribuição dos valores de _LnL_ (azul). **Os valores de _LnL_ devem seguir uma distribuição normal**.
+ 
+![image](https://github.com/user-attachments/assets/966ec8be-b477-48b4-b02d-d0c2bdea69e8)
 
 
-![image](https://github.com/user-attachments/assets/80cee95c-30d6-4bfd-8df8-dad0ea7feb54)
+Clique na aba _Tracer_, como indicado pela seta vermelha na figura abaixo. Analise o gráfico. O eixo y representa valores de _LnL_, enquanto o eixo x representa o número de gerações. Veja que o valor de _LnL_ sobe e desce ao redor de um valor. Este estado é chamodo estacionário. Ele pode ser identificado por este gráfico que lembra um _fuzzy caterpillar_. Caso este gráfico não se pareça com o _fuzzy caterpillar_ há algo errado com a sua análise. Provavelmente, sua análise não está amostrando adequadamente o seu espaço de árvore e você deve alterar os parâmentros padrões do _tree search_ do _MrBayes_.
 
-
-![image](https://github.com/user-attachments/assets/b5c041a2-785c-4e5e-8474-a2de271d98e4)
+![image](https://github.com/user-attachments/assets/82e078da-2d8f-4668-b200-d34a57584143)
 
 
 
