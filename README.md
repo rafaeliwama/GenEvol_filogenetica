@@ -2,7 +2,9 @@
 ### Instrutor: Rafael E. Iwama
 ### Monitora: Isabelle Cristine Santos da Silva
 
-Bem-vindo ao workshop de bioinformática do Curso de Férias em Genética e Evolução (2025). Este será o repositório deste workshop e ficará disponível neste mesmo link, mesmo após o workshop acabar.
+Bem-vindo ao workshop de Inferência Filogenética do Curso de Férias em Genética e Evolução (2025). Este será o repositório deste workshop e ficará disponível neste mesmo link, mesmo após o workshop acabar. O conteúdo deste workshop está dividido em:
+1. [Introdução teórica]
+2. [Inferência filogenética por Parcimônia] (https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/parcimonia.md)
 
 ### O GitHub
 O GitHub é um website e um serviço de nuvem que ajuda desenvolvedores a armazenar e desenvolver códigos de forma colaborativa. Nós utilizaremos o GitHub como um protocolo, em que os alunos do curso podem consultar as linhas de comando que serão executadas no terminal, ou as intruções para a realização de uma determinada atividade.
