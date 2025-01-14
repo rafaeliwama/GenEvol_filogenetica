@@ -90,7 +90,17 @@ Para retornar a pasta parental (acima), digite:
 cd ..
 ```
 
-Utilize o comando `pwd` para checar a pasta atual. E o comando `ls` para lisar os arquivos e diretórios desta pasta.
+Utilize o comando `pwd` para checar a pasta atual. E o comando `ls` para lisar os arquivos e diretórios desta pasta. Note que vc está de volta ao diretório inicial.
+
+Contudo, nós precisamos que você esteja dentro da pasta do curso. digite os seguintes comandos para mudar de diretório e verificar que está no `GenEvol_filogenetica`:
+
+```
+cd GenEvol_filogenetica
+pwd
+```
+
+**3. Utilizando scripts em python**
+
 
 Durante o workshop de hoje, nós precisaremos utilizar alguns scripts em python, que contém comandos para serem executados em série para efetuar uma tarefa. Note que o _script_ 'Hello.py' está presente neste diretório. Este _script_ possui uma única opção, que é o seu nome. Para executa-lo, digite:
 
