@@ -1,4 +1,4 @@
-# Análise filogenética por métodos de máxima verossimilhança
+# Análise filogenética por métodos bayesianos
 ### Intrutor: Rafael E. Iwama
 ### Monitora: Isabelle Cristine Santos da Silva
 
