@@ -4,9 +4,9 @@
 
 Bem-vindo ao workshop de Inferência Filogenética do Curso de Férias em Genética e Evolução (2025). Este será o repositório deste workshop e ficará disponível neste mesmo link, mesmo após o workshop acabar. O conteúdo deste workshop está dividido em:
 1. [Introdução teórica] ### falta escrever a introdução teórica
-2. [Inferência filogenética por Parcimônia](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/parcimonia.md).
-3. [Inferência filogenética por Máxima Verossimilhança](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/Verossimilhanca.md)
-4. [Inferência filogenética Bayesiana](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/bayesian.md)
+2. [Inferência filogenética por Parcimônia](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/1-Parcimonia.md).
+3. [Inferência filogenética por Máxima Verossimilhança](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/2-Verossimilhanca.md)
+4. [Inferência filogenética Bayesiana](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/3-Bayesian.md)
 
 
 Antes de começar, nós precisamos entender um pouco sobre a plataforma GitHub e sobre o terminal.
