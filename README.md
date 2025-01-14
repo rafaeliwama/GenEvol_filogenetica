@@ -3,7 +3,7 @@
 ### Monitora: Isabelle Cristine Santos da Silva
 
 Bem-vindo ao workshop de Inferência Filogenética do Curso de Férias em Genética e Evolução (2025). Este será o repositório deste workshop e ficará disponível neste mesmo link, mesmo após o workshop acabar. O conteúdo deste workshop está dividido em:
-1. [Introdução teórica] ### falta escrever a introdução teórica
+1. [Introdução teórica](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/0-teoria.md)
 2. [Inferência filogenética por Parcimônia](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/1-Parcimonia.md).
 3. [Inferência filogenética por Máxima Verossimilhança](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/2-Verossimilhanca.md)
 4. [Inferência filogenética Bayesiana](https://github.com/rafaeliwama/GenEvol_filogenetica/blob/main/3-Bayesian.md)
@@ -33,7 +33,7 @@ Para que você se familiarize com os comandos principais do terminal, aqui vão 
 
 **1. Abra o terminal e baixe os arquivos deste repositório**
 Clique em inicar no windows e procure por _Ubunto_. Um janela como a figura abaixo deve se abrir. A seta indica o prompt e é por ele que você digitará os comandos necessários para completar os tutoriais.
-![image](https://github.com/user-attachments/assets/e8f54dc4-ac22-41c3-bf1a-8055bfb2fddc)
+![image](https://github.com/user-attachments/assets/c4fb260b-0e57-4428-8dc0-9676fa23dc0c)
 
 O primeiro passo é utilizar o programa `git` para baixar os arquivos e pastas para o workshop de hoje.
 
