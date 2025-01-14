@@ -15,15 +15,10 @@ A principal diferença entre o critéro de máxima parsimônia e o critério da 
 
 Para realizarmos reconstruções utilizando o critério de maxima verossimilhança, nós utilizaremos o _IQTREE_. Diferente do _TNT_, o _IQTREE_ é um programa com um manual exemplar e que contém diversos tutoriais explicando cada uma de suas funcionalidades. O manual do programa pode ser acessado no site: http://www.iqtree.org/doc/
 
-O conteúdo para esta parte do tutorial está disponível na pasta Part2IQTREE do github.
 
+Mude o diretório de trabalho para a pasta 'Likelihood':
 ```
-para baixar a pasta
-```
-
-Mude o diretório de trabalho para a pasta 'Part2IQTREE':
-```
-cd Part2IQTREE
+cd Likelihood
 ```
 
 Esta pasta contém todos os arquivos necessário para rodar o IQTREE:
@@ -102,3 +97,14 @@ Visualize o arquivo com a terminação ```.contree``` no iTOL. Diferente do _TNT
 Responda as perguntas abaixo:
 1. Você oberva alguma politomia? Como o número de politomias difere do número de politomias da árvore de parsimônia?
 2. Como os comprimentos de ramo diferem dos comprimentos de ramo da árvore de parsimônia? Por que você obeserva esta diferença?
+
+## Retorne ao diretório do workshop
+
+Antes de terminar este tutorial, volte para o diretório inicial do curso. Digite:
+
+```
+cd ..
+```
+
+Utilize o `pwd` para verificar se seu diretório atual é o `GenEvol_filogenetica`.
+
