@@ -25,6 +25,11 @@ Vários softwares utilizam o MCMC para a rescontrução filogenética. Hoje nós
 
 ## O formato NEXUS de árquivos
 
+Antes de tudo, mude o diretório de trabalho para `bayesian`:
+
+```
+cd bayesian
+```
 Um dos formatos de arquivos mais populares na bioinformática é o formato NEXUS. Este tipo de arquivo pode conter vários tipos de informação, como por exemplo: sequências, alinhamentos, árvores, códigos genéticos, distâncias filogenéticas, modelos, e até comandos para determinados programas. Um característica particular do formato nexus é o seu potencial para armazenar diversos tipos de informação em um único arquivo. Isso só é possível graças a organização em blocos. Cada arquivo NEXUS pode conter múltiplo blocos que podem armazenar sets de informações diferentes, do mesmo tipo ou de tipos diferentes.
 
 Este é o caso do arquivo de input para o _MrBayes_ que nós utilizaremos.
@@ -199,7 +204,6 @@ O painel indicado pelo retângulo vermelho, na figura abaixo, informa a média d
 Clique na aba _Tracer_, como indicado pela seta vermelha na figura abaixo. Analise o gráfico. O eixo y representa valores de _LnL_, enquanto o eixo x representa o número de gerações. Veja que o valor de _LnL_ sobe e desce ao redor de um valor. Este estado é chamodo estacionário. Ele pode ser identificado por este gráfico que lembra um _fuzzy caterpillar_. Caso este gráfico não se pareça com o _fuzzy caterpillar_ há algo errado com a sua análise. Provavelmente, sua análise não está amostrando adequadamente o seu espaço de árvore e você deve alterar os parâmentros padrões do _tree search_ do _MrBayes_.
 
 ![image](https://github.com/user-attachments/assets/82e078da-2d8f-4668-b200-d34a57584143)
-
 
 
 
