@@ -182,3 +182,14 @@ Uma vez que o programar iniciar, digite ```exec helobdella_GenEvol_dataset_align
 Você deve observar, que o número de gerações completadas é printado no canto esquerdo do terminal e que a cada 5 mil gerações o desvio padrão das frequências (SDSF) é printado. Esta é uma medida da diferença entre probabilidades posteriores amostradas pelas diferentes corridas de MCMC. Convergência total da análise resulta em um valor de 0. Ou seja, as amostragem são identicas. Porém, valores aceitáveis de SDSF são <0.01. 
 
 Algumas análises nunca atingem valores de SDSF aceitáveis, porém outros critérios podem indicar que as análises convergiram de forma aceitavel. Nós podemos avaliar estes critérios com o pograma _Tracer_
+
+
+
+![image](https://github.com/user-attachments/assets/80cee95c-30d6-4bfd-8df8-dad0ea7feb54)
+
+
+![image](https://github.com/user-attachments/assets/b5c041a2-785c-4e5e-8474-a2de271d98e4)
+
+
+
+
