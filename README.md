@@ -17,7 +17,8 @@ O GitHub é um website e um serviço de nuvem que ajuda desenvolvedores a armaze
 Acima, você verá uma série de arquivos. Os arquivos terminados em ".md", indicados pelas setas na figura abaixo, são os tutoriais para cada uma das atividades propostas.
 
 
-# !!!!colocar print no final!!!!
+![image](https://github.com/user-attachments/assets/6c4616ea-bba3-4a0e-8f69-bf384a49e19f)
+
 
 
 Além destes arquivos, você pode observar que, dentro das pastas de cada conteúdo, também estão presentes arquivos ".fasta", ".txt" e outros formatos. O sufixo de um arquivo, normalmente, indica o tipo de arquivo. O sufixo ".md" indica que este arquivo é um arquivo readme do GitHub, que é este arquivo que você está lendo agora. Arquivos ".txt" são chamados de plain text, que são compostos apenas por texto. Arquivos ".fasta" são arquivos ".txt", que estão formatados para armazenar sequências de DNA ou proteína e informações associadas a estas sequências.
