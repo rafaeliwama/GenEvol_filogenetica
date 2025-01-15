@@ -43,5 +43,10 @@ Nesta figura nós podemos visualizar estes três tipos de elementos:
 
 O nó, em vermelho, sofreu uma rotação. Apesar de visualmente a árvore parecer diferente, as mesmas relações são apresentadas. Os terminais 3 e 4 continuam mais próximos entre si. Ou seja, as relações filogenéticas continuam iguais.
 
+### O problema de reconstruções de histórias evolutivas
+Você deve se lembrar do método ciêntífico ilustrado pela figura abaixo. Este método consiste
+
+![image](https://github.com/user-attachments/assets/cafd5186-b06e-449d-becd-dea899cbfdce)
+
 
 
