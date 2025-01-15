@@ -30,8 +30,8 @@ Nesta figura nós podemos visualizar estes três tipos de elementos:
 Árvores fiogenéticas podem ser completamente dicotômicas ou não. Em árvores dicotômicas, cada nó conecta apenas dois ramos. Já em árvores não-dicotômicas, chamadas de politômicas, cada nó pode conectar mais de dois ramos. Na maioria dos casos, esta é a forma de representar altas incertezas na reconstrução filogenética.
 
 
-### Árvores enraízadas e não enraízadas
-Árvore enraízas representam um nó ancestral para todos os ramos de representados. A figura abaixo, mostra a diferença entre árvores enraízadas (A) e não-enraízadas (B). Note que o nó apontado pela seta vermelha é ancestral de todos os ramos. Árvores enraízadas também representam, de forma indireta, a ordem de mudanças observadas entre terminais e nós.
+### Árvores enraizadas e não enraizadas
+Árvore enraízas representam um nó ancestral para todos os ramos de representados. A figura abaixo, mostra a diferença entre árvores enraizadas (A) e não-enraizadas (B). Note que o nó apontado pela seta vermelha é ancestral de todos os ramos. Árvores enraizadas também representam, de forma indireta, a ordem de mudanças observadas entre terminais e nós.
 
 ![image](https://github.com/user-attachments/assets/f117c5a8-930c-4f16-acb6-500fc6eb1347)
 
@@ -44,9 +44,21 @@ Nesta figura nós podemos visualizar estes três tipos de elementos:
 O nó, em vermelho, sofreu uma rotação. Apesar de visualmente a árvore parecer diferente, as mesmas relações são apresentadas. Os terminais 3 e 4 continuam mais próximos entre si. Ou seja, as relações filogenéticas continuam iguais.
 
 ### O problema de reconstruções de histórias evolutivas
-Você deve se lembrar do método ciêntífico ilustrado pela figura abaixo. Este método consiste
+
+
+Você deve se lembrar do método ciêntífico ilustrado pela figura abaixo. Este método consiste na inferências de hipóteses e testes que falseam ou não uma hipótese incial. Estes testes acontecem de forma experimental ou correlacional. Contudo, este método não funciona bem na biologia comparada, já que é impossível reproduzir eventos de cladogênese (separação de linhagens). 
+
 
 ![image](https://github.com/user-attachments/assets/cafd5186-b06e-449d-becd-dea899cbfdce)
 
+Para complicar ainda mais o problema, o número de hipóteses para grupo de organismos pode alcançar número gigantes rapidamente.
+
+A tavela abaixo mostra como o número de árvores cresce de forma exponencial de acordo com o número de terminais (_n_)
+
+![image](https://github.com/user-attachments/assets/51bd8771-bcb9-406e-9ff3-91270f81805d)
+
+Apesar de testes convencionais não poderem ser aplicados na reconstrução filogenética, nós podemos utilizar evidências históricas e critérios para selecionar as melhores hipóteses filogenéticas.
+
+### A homologia como evidência da evolução
 
 
