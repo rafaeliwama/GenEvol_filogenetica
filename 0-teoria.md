@@ -2,7 +2,7 @@
 ### Intrutor: Rafael E. Iwama
 ### Monitora: Isabelle Cristine Santos da Silva
 
-### O que é filogética?
+### O que é filogenética?
 
 A filogenética é a ciência que têm o objetivo de reconstruir e avaliar hipóteses das relações entre diferentes linhagens de organismos. Sua origem pode ser traçada até Darwin e ao conceito de que espécies são originadas de espécies ancestrais.
 
