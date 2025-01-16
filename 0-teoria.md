@@ -103,5 +103,14 @@ A morfologia não é a única fonte de informação sobre a história evolutiva 
 ![image](https://github.com/user-attachments/assets/8113f0e0-e6c8-4898-9154-f27abb032367)
 
 
+### O workshop
+
+O objetivo desta introduçao teórica é a de apresentar alguns conceitos fundamentais na reconstrução filogenética. Durante o workshop você entederá como nós podemos utilizar o conceito de homologia para selecionar hipóteses plausíveis de acordo com três critérios diferentes: máxima parcimônia, máxima verossimilhança e critérios bayesianos.
+
+Até breve!
+Rafael
+
+
+
 
 
