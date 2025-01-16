@@ -59,7 +59,7 @@ A tavela abaixo mostra como o número de árvores cresce de forma exponencial de
 
 Apesar de testes convencionais não poderem ser aplicados na reconstrução filogenética, nós podemos utilizar evidências históricas e critérios para selecionar as melhores hipóteses filogenéticas.
 
-### Caractere, homologia e homoplasia
+### Caractere e homologia
 Três conceitos são fudamentais na biologia comparada. São eles: caractere, homologia e homoplasia. Para entender estes três conceitos, iremos analisar a figura abaixo:
 
 ![image](https://github.com/user-attachments/assets/494ca375-55cd-4eed-9421-8c8563170183)
