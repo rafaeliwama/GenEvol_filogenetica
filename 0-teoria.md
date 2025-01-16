@@ -59,6 +59,35 @@ A tavela abaixo mostra como o número de árvores cresce de forma exponencial de
 
 Apesar de testes convencionais não poderem ser aplicados na reconstrução filogenética, nós podemos utilizar evidências históricas e critérios para selecionar as melhores hipóteses filogenéticas.
 
-### A homologia como evidência da evolução
+### Caractere, homologia e homoplasia
+Três conceitos são fudamentais na biologia comparada. São eles: caractere, homologia e homoplasia. Para entender estes três conceitos, iremos analisar a figura abaixo:
+
+![image](https://github.com/user-attachments/assets/494ca375-55cd-4eed-9421-8c8563170183)
+
+Perceba que, entre as três espécies diferentes de plantas, é possivel identificar partes correspondentes. Em outras palavras, estas amostras possuem folhas, caules, nervuras e várias outras (o meu conhecimento de botânica acaba aqui! hehe). Contudo, também é possível observar que existem diferenças significativas entre estes indivíduos. Algumas folhas possuem cores diferentes e formatos diferentes. Outras têm nervuras horizontais e outros verticais e assim por diante. 
+
+**Por que é possível observar correspondência entre organismos diferentes?**
+
+É possível observar uma correspondência entre vários 'tipos' de espécies diferentes. No exemplo acima, a correspondência observada é entre espécies. A figura abaixo, mostra uma correspondência entre etapas diferentes do desenvolvimento dos membros de morcegos. Para cada tipo de relação, uma explicação causal diferente pode ser atribuída. No primeiro caso (das plantas), a causa da existência de partes correspondentes entre as diferentes espécies é a história evolutiva compartilhada entre as três espécies, ou seja, o compartilhamento de um ancestral comum próximo. No segundo caso, a causa é a relação ontogenética entre as partes.
+
+![image](https://github.com/user-attachments/assets/ce2f8700-3ad5-4af7-87e6-dfa308201e26)
+
+Richard Owen, foi o primeiro a atribuir um nome para esta relação. Ele chamou esta correspondência entre as partes de **homologia**. Owen, reconhecia a existência de diferentes tipos de homologia. Porém, a inteção de Owen nunca foi atribuir uma explicação causal entre partes correspondêntes. De fato, o conceito passou por diversas transformações até o conceito aceito hoje. Três principais conceitos de homologia se destacam. São eles:
+1. **Homologia ontogenética** - que é resultado do desenvolvimento do indivíduo. Ou seja, pode ser atribuídos a diferentes estágios do desenvolvimento de um mesmo indivíduo.
+2. **Homologia serial** - é a resultado da repetição de regiões do corpo (metameria). Ex. diferentes segmentos em artrópodes, a coluna vertebral e etc.
+3. **Homologia filogenética** - É resultado da origem comum de estruturas e indivíduos. É atribuída a estruturas correspondentes em indivíduos diferentes.
+
+A figura abaixo ilustra a homologia serial e a homologia filogenética.
+
+![image](https://github.com/user-attachments/assets/78d6badd-93dd-49c7-8ee8-ec661b8cfe49)
+
+**Por que é possível observar diferenças entre organismos diferentes?**
+
+Enquanto a homologia é a explicação causal histórica para correspondência de partes (estruturas) e similaridade, o conceito de caractere lida com as diferenças entre organismos. Assim como a homologia, este conceito passou por diversas transformações. Porém o conceito mais aceito atualmente é o de Platnick (1979) que o define como o mesmo atributo com formas diferentes. Perceba a relação entre as formas possui um papel central nesta definição. Esta relação é uma relação de correspondência, ou seja de homologia entre as diferentes estruturas que apresentam diferenças.
+
+As diferentes formas de um mesmo atributo são chamadas de estados de caracter, enquanto o atributo em si é chamado de caractere. A figura abaixo mostra esta relação entre caracteres e seus estados.
+
+![image](https://github.com/user-attachments/assets/1bbe0ffc-b79f-478b-b21e-c44668fe9970)
+
 
 
