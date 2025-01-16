@@ -90,4 +90,18 @@ As diferentes formas de um mesmo atributo são chamadas de estados de caracter, 
 ![image](https://github.com/user-attachments/assets/1bbe0ffc-b79f-478b-b21e-c44668fe9970)
 
 
+**Homologia e os estados de caractere como evidência da história evolutiva**
+Nós podemos utilizar a distribuição dos estados de caractere como evidências da história evolutiva dos organismos. O compartilhamento de estados de caracteres entre organismos diferentes pode ser uma evidência forte de ancestralidade comum. Na figura abaixo é possível observar que cada um dos caracteres descritos apontam similaridades e diferenças entre os organismos e que cada um destes caracteres podem apontar para histórias evolutivas diferentes.
+
+![image](https://github.com/user-attachments/assets/b171761b-634d-4465-8911-9cddfe41f14a)
+
+
+**Além da morfologia**
+
+A morfologia não é a única fonte de informação sobre a história evolutiva dos organismos. Em tese, qualquer atríbuto de um organismo pode ser utilizado na inferência filogenética, desde que este atributo seja homólogo. Isso incluí caracteres comportamentais, fisiológicos e moleculares. Desde a década de 90, com o avanço das técnicas de sequenciamento, há um grande a aumento do uso de dados moleculares como a ausência ou presença de genes, de sequências de nucleotídeos e da estrutura tridimensional de proteínas.
+
+![image](https://github.com/user-attachments/assets/8113f0e0-e6c8-4898-9154-f27abb032367)
+
+
+
 
