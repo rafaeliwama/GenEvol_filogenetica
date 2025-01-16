@@ -77,6 +77,12 @@ Richard Owen, foi o primeiro a atribuir um nome para esta relação. Ele chamou 
 2. **Homologia serial** - é a resultado da repetição de regiões do corpo (metameria). Ex. diferentes segmentos em artrópodes, a coluna vertebral e etc.
 3. **Homologia filogenética** - É resultado da origem comum de estruturas e indivíduos. É atribuída a estruturas correspondentes em indivíduos diferentes.
 
+> [!TIP]
+> Leitura recomendada:
+> 
+> Hoßfeld, Uwe, and Lennart Olsson. "The history of the homology concept and the “Phylogenetisches Symposium”." Theory in Biosciences 124 (2005): 243-253.
+
+
 A figura abaixo ilustra a homologia serial e a homologia filogenética.
 
 ![image](https://github.com/user-attachments/assets/78d6badd-93dd-49c7-8ee8-ec661b8cfe49)
@@ -101,6 +107,12 @@ Nós podemos utilizar a distribuição dos estados de caractere como evidências
 A morfologia não é a única fonte de informação sobre a história evolutiva dos organismos. Em tese, qualquer atríbuto de um organismo pode ser utilizado na inferência filogenética, desde que este atributo seja homólogo. Isso incluí caracteres comportamentais, fisiológicos e moleculares. Desde a década de 90, com o avanço das técnicas de sequenciamento, há um grande a aumento do uso de dados moleculares como a ausência ou presença de genes, de sequências de nucleotídeos e da estrutura tridimensional de proteínas.
 
 ![image](https://github.com/user-attachments/assets/8113f0e0-e6c8-4898-9154-f27abb032367)
+
+
+> [!TIP]
+> Leitura recomendada:
+> 
+> Schultz, Darrin T., et al. "Ancient gene linkages support ctenophores as sister to other animals." Nature (2023): 1-8.
 
 
 ### O workshop
