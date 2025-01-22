@@ -7,6 +7,7 @@ try:
 
 except:
     print('Biopython not installed. Trying to install it with pip')
+    os.system('pip install --upgrade pip')
     os.system('pip install biopython')
     from Bio import SeqIO
 
