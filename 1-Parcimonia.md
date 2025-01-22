@@ -120,9 +120,8 @@ Agora que nós já temos o a matriz, nós utilizaremos o _TNT_ para realizar bus
 Mude o seu diretório de trabalho para a pasta contendo o aquivo executável do _TNT_ (TNT-bin). E execute o arquivo _TNT_: 
 
 ```
-cd TNT-bin
-chmod 705 TNT
-./TNT
+chmod 705 tnt
+./tnt
 ```
 
 Caso seja a primeira vez que você executou o _TNT_, você precisará aceitar os termos de uso. Siga as instruções do programa.
