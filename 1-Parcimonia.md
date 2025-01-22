@@ -121,6 +121,7 @@ Mude o seu diretório de trabalho para a pasta contendo o aquivo executável do 
 
 ```
 cd TNT-bin
+chmod 705 TNT
 ./TNT
 ```
 
