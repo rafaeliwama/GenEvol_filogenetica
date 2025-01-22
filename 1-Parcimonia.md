@@ -120,7 +120,7 @@ Agora que nós já temos o a matriz, nós utilizaremos o _TNT_ para realizar bus
 Mude o seu diretório de trabalho para a pasta contendo o aquivo executável do _TNT_ (TNT-bin). E execute o arquivo _TNT_: 
 
 ```
-mv helobdella_GenEvol_dataset_aligned.fasta TNT-bin
+mv matrix.tnt TNT-bin
 cd TNT-bin
 chmod 705 tnt
 ./tnt
