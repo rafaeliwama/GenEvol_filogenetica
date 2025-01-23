@@ -53,7 +53,7 @@ Este comando deve criar o arquivo ```helobdella_GenEvol_dataset_aligned.nex```. 
 Diferente do que nós fizemos no _TNT_ e no _IQTREE_, todos os comandos utilizados pelo MrBayes serão especificados em um bloco específico do arquivo NEXUS. Nós chamaremos este bloco de _MrBayes block_. Para isso, siga as instruções à seguir:
 
 1. Abra o arquivo ```helobdella_GenEvol_dataset_aligned.nex``` no seu editor de texto.
-2. Ao final do arquivo, após o comando ```END;```, digite: ```begin MRBAYES``` em uma nova linha. Este comando inicia um _MrBayes block_
+2. Ao final do arquivo, após o comando ```END;```, digite: ```begin MRBAYES;``` em uma nova linha. Este comando inicia um _MrBayes block_
 3. Em uma nova linha, digite o comando ```log start filename=helobdella_COI_log.txt;```. Este comando faz com que o _MrBayes_ escreva um arquivo log, que é importante para consulta após o término da análise.
 
 Perceba uma característica importante em um arquivo NEXUS. Comandos terminam em ```;```!!!
